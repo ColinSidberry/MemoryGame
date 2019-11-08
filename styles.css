@@ -1,0 +1,111 @@
+html {
+  font-size: 62.5%;
+}
+
+body{
+  background-color: grey;
+}
+
+#game-info {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  grid-gap: 20px;
+  width: 100%;
+  height: 50px;
+}
+
+#timer {
+  /* height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center; */
+}
+
+#reset {
+  height: 20px;
+  width: 50px;
+  /* background-color: yellow; */
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+}
+
+#grid {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  margin: 10px;
+  padding: 10px;
+  grid-gap: 10px;
+  justify-content: center;
+  perspective: 500px;
+}
+.front img {
+  height: 175px;
+  width: 98px;
+  border-radius: 12px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: grey;
+}
+.card{
+  height: 175px;
+  width: 98px;
+  position:relative;
+  /* background-color: grey; */
+  justify-content: center;
+}
+
+.card-face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 500ms ease-in-out;
+}
+
+.card.visible .front{
+  transform: rotateY(-180deg);
+}
+
+.card.visible .back{
+  transform: rotateY(0);
+}
+
+.back{
+  transform: rotateY(180deg);
+  border-radius: 12px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.back-text{
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+}
+/* text spill out when the view gets larger. Its not  */
+
+.back-language{
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 7%;
+  font-size: 1.3rem;
+}
+
+.back-language img{
+  height: auto;
+  width: 16px;
+}
+
+/* Rabbit hole
+  Margin–Auto value
+  https://www.w3schools.com/css/css_margin.asp
+  */
