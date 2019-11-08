@@ -1,13 +1,9 @@
-/*Problems
-  1. if u click on the same card twice and then click on another card the first card flips back over and the second card does nothing
-  2. Why is the last card not letting me flip it over? (The one with the comments syntax)
+/*Other To Do's 
+  1. Have countdown timer restart and reshuffle card
+  2. consolidate duplicate variables
+  3. when I write the blog maybe look thru Sandy's and some of the other code to see what they did different and gather best practices from doing so
 */
-/*Other To Do's
-  1. handle scoring
-  2. countdown timout function
-  last. consolidate duplicate variables
-  blog.when I write the blog maybe look thru Sandy's and some of the other code to see what they did different and gather best practices from doing so
-*/
+
 const cardsArray = document.querySelectorAll('.card');
 let timer = document.getElementById('timer');
 let flips = 0
@@ -23,7 +19,6 @@ let startTimer = function() {
     timer.innerHTML = 'Timer: ' + seconds--;
     if (seconds < 0) {
       clearInterval(interval);
-      // restart();
     }
   }
   let interval = setInterval(countdown,1000);
@@ -39,20 +34,12 @@ let restart = function(){
   }
   seconds = 0;
   setTimeout(function () {
-    // seconds = 50;
-    // timer.innerHTML = 'Timer: ' + seconds;
     startTimer();
-    // setUpGame()
     flips = 0;
     document.getElementById('flips').innerHTML = 'Flips: ' + flips;
   }, 1000);
 }
 reset.addEventListener('click',restart);
-//Problem is its current form the reset button is simultaneously running two countdown timers. When we click reset we need to be able to stop the first countdown timer. The struggle there tho is to stop the first countdown timer we need to pass out the identifier fo rthe setInterval function which means it would need to be initialized outside of the function.
-
-
-
-
 
 //Populate card fronts
 for (let i = 0; i < cardsArray.length; i++){
@@ -154,8 +141,9 @@ let setUpGame = function () {
   }
 }
 setUpGame();
-// ------------------------------------Game Play
-//have this funciton just return a single cards index
+
+// ------------------------------------Game Play------------------------------------
+//have this funciton just return a single card's index
 let findIndex = function(event) {
   let cardBackChildren = event.target.parentElement.nextElementSibling.children
   let backText = cardBackChildren[0].innerHTML;
@@ -213,14 +201,7 @@ let playGame = function(event){
     }
   }
 }
-//the problem is that we want to avoid assigning the same card to the second card
 
 // Adding the event listener
 let cards = document.getElementById('grid');
 cards.addEventListener('click',playGame);
-
-
-// Game Logic
-    //*run a loop that simultaneously fires the action of flipping the card and then stores the value(or whatever key identifier we are going to use) to the array. Have the loop run while array.length < 2
-
-    //when all the matches have been found fire off the you win sequence
