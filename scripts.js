@@ -133,7 +133,7 @@ let setUpGame = function () {
       cardBack.style.backgroundColor = '#ffde59';
     } else {
       let img = document.createElement('img');
-      img.src = 'https://freddooley.com/wp-content/uploads/2019/11/ruby-logo.png';
+      img.src = '/Assets/card_back.pg/';
       cardBack.children[1].appendChild(img);
       cardBack.children[1].title = 'Ruby';
       cardBack.style.backgroundColor = '#ffaeae';
