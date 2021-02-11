@@ -44,7 +44,7 @@ reset.addEventListener('click',restart);
 //Populate card fronts
 for (let i = 0; i < cardsArray.length; i++){
   let img = document.createElement('img');
-  img.src = '/Assets/card_back.png/';
+  img.src = 'https://github.com/ColinSidberry/colinsidberry.github.io/blob/master/Assets/card_back.png';
   let cardFront = cardsArray[i].children[0];
   cardFront.appendChild(img);
 }
