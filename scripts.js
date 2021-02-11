@@ -44,7 +44,7 @@ reset.addEventListener('click',restart);
 //Populate card fronts
 for (let i = 0; i < cardsArray.length; i++){
   let img = document.createElement('img');
-  img.src = 'https://freddooley.com/wp-content/uploads/2019/11/Tech.png';
+  img.src = '/Assets/card_back.png/';
   let cardFront = cardsArray[i].children[0];
   cardFront.appendChild(img);
 }
@@ -133,7 +133,7 @@ let setUpGame = function () {
       cardBack.style.backgroundColor = '#ffde59';
     } else {
       let img = document.createElement('img');
-      img.src = 'colinsidberry.github.io/Assets/card_back.png';
+      img.src = 'colinsidberry.github.io/Assets/ruby.png';
       cardBack.children[1].appendChild(img);
       cardBack.children[1].title = 'Ruby';
       cardBack.style.backgroundColor = '#ffaeae';
