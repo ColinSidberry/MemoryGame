@@ -133,7 +133,7 @@ let setUpGame = function () {
       cardBack.style.backgroundColor = '#ffde59';
     } else {
       let img = document.createElement('img');
-      img.src = '/Assets/card_back.png/';
+      img.src = '/Assets/card_back.png';
       cardBack.children[1].appendChild(img);
       cardBack.children[1].title = 'Ruby';
       cardBack.style.backgroundColor = '#ffaeae';
